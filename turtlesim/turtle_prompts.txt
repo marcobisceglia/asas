@@ -1,0 +1,6 @@
+1. Move the turtle forward for 2 seconds, then stop.
+2. Publish a Twist message with linear.x=1.0 on /turtle1/cmd_vel, wait 2 seconds, then publish a Twist with linear.x=0.0 to stop.
+3. Spawn a new turtle named turtle2 at position x=5, y=5.
+4. What is the turtle's current position?
+5. Move the turtle2 backwards for 5 seconds, then stop.
+6. Draw a circle.
