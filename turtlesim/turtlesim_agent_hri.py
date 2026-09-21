@@ -12,7 +12,7 @@ from rai.communication.ros2 import (
     wait_for_ros2_topics
 )
 
-from turtlesim_tools import custom_tools
+#from turtlesim_tools import custom_tools
 
 INPUT_TOPIC = "/from_human"
 OUTPUT_TOPIC = "/to_human"
@@ -55,7 +55,7 @@ def main() -> None:
     wait_for_ros2_topics(ros2_connector, required_topics)
 
     #tools = ROS2Toolkit(connector=ros2_connector).get_tools() + get_custom_tools(ros2_connector) # ros 2 tools + custom for turtle
-    tools = custom_tools #+ get_custom_tools(ros2_connector)
+    #tools = custom_tools #+ get_custom_tools(ros2_connector)
 
     # Load the system prompt
     embodiment_info = EmbodimentInfo.from_file("turtlesim_embodiment.json")
@@ -63,7 +63,7 @@ def main() -> None:
     # build the agent. It will have ROS 2 tools and the turtle prompt
     # to change LLM model, updated config.toml
     agent = create_react_runnable(
-        tools=tools,
+        #tools=tools,
         system_prompt=embodiment_info.to_langchain(),
     )
 
