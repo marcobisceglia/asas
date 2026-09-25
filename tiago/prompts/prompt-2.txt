@@ -1,0 +1,1 @@
+Let's play hide and seek. Search for me in the rooms in this order: room 1, room 2, room 3, room 4, room 5, room 6, room 7. After reaching each room, ask me if I am there and wait for my answer. If I answer no, continue to the next room. If I answer yes, stop searching and tell me that you found me.
