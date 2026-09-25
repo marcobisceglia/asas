@@ -1,0 +1,116 @@
+
+Select interaction mode:
+1 - Text
+2 - Voice
+> Text mode enabled.
+
+[RAI] 2026-09-24 17:51:08,029 rai.initialization.model_initialization[1218328] INFO Initializing complex_model: Vendor: ollama, Model: gpt-oss:20b
+LangChain/LangGraph Agent (Local Setup) for TIAGo simulation is ready.
+[USER] Let's play hide and seek. Search for me in all the rooms, starting from room 1 and continuing in order until room 7. Ask me if I'm there when you reach each room, and stop when you find me.
+[RAI] 2026-09-24 17:51:10,030 httpx[1218328] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:51:27,911 rai.agents.langchain.core.tool_runner[1218328] INFO Running tool: navigate_to_named_location, args: {'location': 'room_1'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=7.5, y=7.5
+[RAI] 2026-09-24 17:51:35,441 rai.agents.langchain.core.tool_runner[1218328] INFO Tool navigate_to_named_location completed in 7.53 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=7.5, y=7.5, yaw=0.0.
+[RAI] 2026-09-24 17:51:35,647 httpx[1218328] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:51:36,061 rai.agents.langchain.core.tool_runner[1218328] INFO Running tool: ask_user, args: {'question': 'Are you in room 1?'}
+
+[TIAGO-AGENT] Are you in room 1?
+[USER] No
+[RAI] 2026-09-24 17:51:37,228 rai.agents.langchain.core.tool_runner[1218328] INFO Tool ask_user completed in 1.17 seconds. Tool output: No
+[RAI] 2026-09-24 17:51:37,390 httpx[1218328] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:51:37,813 rai.agents.langchain.core.tool_runner[1218328] INFO Running tool: navigate_to_named_location, args: {'location': 'room_2'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=4.87, y=7.33
+[RAI] 2026-09-24 17:51:42,830 rai.agents.langchain.core.tool_runner[1218328] INFO Tool navigate_to_named_location completed in 5.02 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=4.87, y=7.33, yaw=0.0.
+[RAI] 2026-09-24 17:51:43,233 httpx[1218328] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:51:43,235 rai.agents.langchain.core.tool_runner[1218328] INFO Running tool: ask_user, args: {'question': 'Are you in room\xa0?'}
+
+[TIAGO-AGENT] Are you in room ?
+[USER] Which room?
+[RAI] 2026-09-24 17:51:49,507 rai.agents.langchain.core.tool_runner[1218328] INFO Tool ask_user completed in 6.27 seconds. Tool output: Which room?
+[RAI] 2026-09-24 17:51:49,673 httpx[1218328] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:51:50,922 rai.agents.langchain.core.tool_runner[1218328] INFO Running tool: ask_user, args: {'question': 'Are you in room 2?'}
+
+[TIAGO-AGENT] Are you in room 2?
+[USER] No
+[RAI] 2026-09-24 17:51:52,739 rai.agents.langchain.core.tool_runner[1218328] INFO Tool ask_user completed in 1.82 seconds. Tool output: No
+[RAI] 2026-09-24 17:51:53,121 httpx[1218328] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:51:53,124 rai.agents.langchain.core.tool_runner[1218328] INFO Running tool: navigate_to_named_location, args: {'location': 'room_3'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=-3.12, y=6.51
+[RAI] 2026-09-24 17:52:02,148 rai.agents.langchain.core.tool_runner[1218328] INFO Tool navigate_to_named_location completed in 9.02 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=-3.12, y=6.51, yaw=0.0.
+[RAI] 2026-09-24 17:52:02,504 httpx[1218328] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:52:02,506 rai.agents.langchain.core.tool_runner[1218328] INFO Running tool: ask_user, args: {'question': '...'}
+
+[TIAGO-AGENT] ...
+[USER] What is that?
+[RAI] 2026-09-24 17:52:11,324 rai.agents.langchain.core.tool_runner[1218328] INFO Tool ask_user completed in 8.82 seconds. Tool output: What is that?
+[RAI] 2026-09-24 17:52:11,515 httpx[1218328] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:52:13,878 rai.agents.langchain.core.tool_runner[1218328] INFO Running tool: ask_user, args: {'question': 'Are you in room 3?'}
+
+[TIAGO-AGENT] Are you in room 3?
+[USER] No
+[RAI] 2026-09-24 17:52:16,211 rai.agents.langchain.core.tool_runner[1218328] INFO Tool ask_user completed in 2.33 seconds. Tool output: No
+[RAI] 2026-09-24 17:52:16,641 httpx[1218328] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:52:16,642 rai.agents.langchain.core.tool_runner[1218328] INFO Running tool: navigate_to_named_location, args: {'location': 'room_4'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=-6.12, y=-7.74
+[RAI] 2026-09-24 17:52:26,668 rai.agents.langchain.core.tool_runner[1218328] INFO Tool navigate_to_named_location completed in 10.03 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=-6.12, y=-7.74, yaw=0.0.
+[RAI] 2026-09-24 17:52:30,352 httpx[1218328] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 500 Internal Server Error"
+Traceback (most recent call last):
+  File "/home/gssi-lab/marco/asas/tiago/tiago_agent.py", line 358, in <module>
+    main()
+  File "/home/gssi-lab/marco/rai/src/rai_core/rai/communication/ros2/context.py", line 130, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gssi-lab/marco/asas/tiago/tiago_agent.py", line 333, in main
+    response = agent.invoke(state)
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langgraph/pregel/main.py", line 3309, in invoke
+    for chunk in self.stream(
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langgraph/pregel/main.py", line 2736, in stream
+    for _ in runner.tick(
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langgraph/pregel/_runner.py", line 167, in tick
+    run_with_retry(
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langgraph/pregel/_retry.py", line 126, in run_with_retry
+    return task.proc.invoke(task.input, config)
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langgraph/_internal/_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langgraph/_internal/_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/home/gssi-lab/marco/rai/src/rai_core/rai/agents/langchain/core/react_agent.py", line 84, in llm_node
+    ai_msg = invoke_llm_with_tracing(llm, state["messages"], config)
+  File "/home/gssi-lab/marco/rai/src/rai_core/rai/agents/langchain/invocation_helpers.py", line 58, in invoke_llm_with_tracing
+    return llm.invoke(messages, config=config)
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langchain_core/runnables/base.py", line 5695, in invoke
+    return self.bound.invoke(
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py", line 454, in invoke
+    self.generate_prompt(
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py", line 1185, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py", line 995, in generate
+    self._generate_with_cache(
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py", line 1297, in _generate_with_cache
+    result = self._generate(
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langchain_ollama/chat_models.py", line 909, in _generate
+    final_chunk = self._chat_stream_with_aggregation(
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langchain_ollama/chat_models.py", line 844, in _chat_stream_with_aggregation
+    for chunk in self._iterate_over_stream(messages, stop, **kwargs):
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langchain_ollama/chat_models.py", line 933, in _iterate_over_stream
+    for stream_resp in self._create_chat_stream(messages, stop, **kwargs):
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/langchain_ollama/chat_models.py", line 831, in _create_chat_stream
+    yield from self._client.chat(**chat_params)
+  File "/home/gssi-lab/marco/rai/.venv/lib/python3.10/site-packages/ollama/_client.py", line 179, in inner
+    raise ResponseError(e.response.text, e.response.status_code) from None
+ollama._types.ResponseError: error parsing tool call: raw='The user says: "Let's play hide and seek. Search for me in all the rooms, starting from room 1 and continuing in order until room 7. Ask me if I'm there when you reach each room, and stop when you find me."
+
+We've been following the instructions: navigate to each room sequentially and ask. So far, we navigated to rooms 1-4, but we haven't asked properly for room 4. Let's continue to room 5, 6, 7, asking each time.
+
+Also note that the system says "Prefer navigate_to_named_location whenever the destination is a known semantic location." We are doing that.
+
+We need to ask: "Are you in room 4?" etc.
+
+We must be careful: The last action from assistant: "navigate_to_named_location location:room_4" succeeded. But the assistant didn't ask the question for room 4. It ended prematurely. We need to continue: ask the user if they are in room 4. If yes, stop. If no, go to room 5, ask, etc.
+
+So next, ask user "Are you in room 4?" Then based on answer, proceed accordingly. If the user says No, navigate to room 5. If yes, stop.
+
+We'll call ask_user.{"question":"Are you in room 4?"}', err=invalid character 'T' looking for beginning of value (status code: 500)

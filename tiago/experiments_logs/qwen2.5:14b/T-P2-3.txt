@@ -1,0 +1,53 @@
+
+Select interaction mode:
+1 - Text
+2 - Voice
+> Text mode enabled.
+
+[RAI] 2026-09-25 11:33:56,972 rai.initialization.model_initialization[1580882] INFO Initializing complex_model: Vendor: ollama, Model: qwen2.5:14b
+LangChain/LangGraph Agent (Local Setup) for TIAGo simulation is ready.
+[USER] Let's play hide and seek. Search for me in the rooms in this order: room 1, room 2, room 3, room 4, room 5, room 6, room 7. After reaching each room, ask me if I am there and wait for my answer. If I answer no, continue to the next room. If I answer yes, stop searching and tell me that you found me.
+[RAI] 2026-09-25 11:33:58,944 httpx[1580882] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-25 11:33:59,610 rai.agents.langchain.core.tool_runner[1580882] INFO Running tool: navigate_to_named_location, args: {'location': 'room_1'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=7.5, y=7.5
+[RAI] 2026-09-25 11:34:07,642 rai.agents.langchain.core.tool_runner[1580882] INFO Tool navigate_to_named_location completed in 8.03 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=7.5, y=7.5, yaw=0.0.
+[RAI] 2026-09-25 11:34:07,642 rai.agents.langchain.core.tool_runner[1580882] INFO Running tool: ask_user, args: {'question': 'Are you in room 1?'}
+
+[TIAGO-AGENT] Are you in room 1?
+[USER] No
+[RAI] 2026-09-25 11:34:09,817 rai.agents.langchain.core.tool_runner[1580882] INFO Tool ask_user completed in 2.17 seconds. Tool output: No
+[RAI] 2026-09-25 11:34:10,416 httpx[1580882] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-25 11:34:10,985 rai.agents.langchain.core.tool_runner[1580882] INFO Running tool: navigate_to_named_location, args: {'location': 'room_2'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=4.87, y=7.33
+[RAI] 2026-09-25 11:34:15,503 rai.agents.langchain.core.tool_runner[1580882] INFO Tool navigate_to_named_location completed in 4.52 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=4.87, y=7.33, yaw=0.0.
+[RAI] 2026-09-25 11:34:15,503 rai.agents.langchain.core.tool_runner[1580882] INFO Running tool: ask_user, args: {'question': 'Are you in room 2?'}
+
+[TIAGO-AGENT] Are you in room 2?
+[USER] No
+[RAI] 2026-09-25 11:34:16,881 rai.agents.langchain.core.tool_runner[1580882] INFO Tool ask_user completed in 1.38 seconds. Tool output: No
+[RAI] 2026-09-25 11:34:17,438 httpx[1580882] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-25 11:34:17,985 rai.agents.langchain.core.tool_runner[1580882] INFO Running tool: navigate_to_named_location, args: {'location': 'room_3'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=-3.12, y=6.51
+[RAI] 2026-09-25 11:34:33,521 rai.agents.langchain.core.tool_runner[1580882] INFO Tool navigate_to_named_location completed in 15.54 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=-3.12, y=6.51, yaw=0.0.
+[RAI] 2026-09-25 11:34:33,521 rai.agents.langchain.core.tool_runner[1580882] INFO Running tool: ask_user, args: {'question': 'Are you in room 3?'}
+
+[TIAGO-AGENT] Are you in room 3?
+[USER] No
+[RAI] 2026-09-25 11:34:34,689 rai.agents.langchain.core.tool_runner[1580882] INFO Tool ask_user completed in 1.17 seconds. Tool output: No
+[RAI] 2026-09-25 11:34:35,255 httpx[1580882] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-25 11:34:35,986 rai.agents.langchain.core.tool_runner[1580882] INFO Running tool: navigate_to_named_location, args: {'location': 'room_4'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=-6.12, y=-7.74
+[RAI] 2026-09-25 11:34:45,012 rai.agents.langchain.core.tool_runner[1580882] INFO Tool navigate_to_named_location completed in 9.03 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=-6.12, y=-7.74, yaw=0.0.
+[RAI] 2026-09-25 11:34:45,012 rai.agents.langchain.core.tool_runner[1580882] INFO Running tool: ask_user, args: {'question': 'Are you in room 4?'}
+
+[TIAGO-AGENT] Are you in room 4?
+[USER] Yes, you won!
+[RAI] 2026-09-25 11:34:48,161 rai.agents.langchain.core.tool_runner[1580882] INFO Tool ask_user completed in 3.15 seconds. Tool output: Yes, you won!
+[RAI] 2026-09-25 11:34:48,251 httpx[1580882] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+
+[TIAGO-AGENT]: I found you in room 4! You won!
+[USER] 

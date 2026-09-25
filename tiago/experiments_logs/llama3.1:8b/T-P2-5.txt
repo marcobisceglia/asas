@@ -1,0 +1,43 @@
+
+Select interaction mode:
+1 - Text
+2 - Voice
+> Text mode enabled.
+
+[RAI] 2026-09-24 16:29:57,860 rai.initialization.model_initialization[1154359] INFO Initializing complex_model: Vendor: ollama, Model: llama3.1:8b
+LangChain/LangGraph Agent (Local Setup) for TIAGo simulation is ready.
+[USER] Let's play hide and seek. Search for me in the rooms in this order: room 1, room 2, room 3, room 4, room 5, room 6, room 7. After reaching each room, ask me if I am there and wait for my answer. If I answer no, continue to the next room. If I answer yes, stop searching and tell me that you found me.
+[RAI] 2026-09-24 16:30:00,185 httpx[1154359] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 16:30:05,293 rai.agents.langchain.core.tool_runner[1154359] INFO Running tool: navigate_to_named_location, args: {'location': 'room_1'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=7.5, y=7.5
+[RAI] 2026-09-24 16:30:12,322 rai.agents.langchain.core.tool_runner[1154359] INFO Tool navigate_to_named_location completed in 7.03 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=7.5, y=7.5, yaw=0.0.
+[RAI] 2026-09-24 16:30:12,322 rai.agents.langchain.core.tool_runner[1154359] INFO Running tool: ask_user, args: {'question': 'Are you in room 1?'}
+
+[TIAGO-AGENT] Are you in room 1?
+[USER] No
+[RAI] 2026-09-24 16:30:14,068 rai.agents.langchain.core.tool_runner[1154359] INFO Tool ask_user completed in 1.75 seconds. Tool output: No
+[RAI] 2026-09-24 16:30:14,068 rai.agents.langchain.core.tool_runner[1154359] INFO Running tool: wait_seconds, args: {'seconds': 3}
+[RAI] 2026-09-24 16:30:17,072 rai.agents.langchain.core.tool_runner[1154359] INFO Tool wait_seconds completed in 3.00 seconds. Tool output: Waited for 3.0 seconds.
+[RAI] 2026-09-24 16:30:17,072 rai.agents.langchain.core.tool_runner[1154359] INFO Running tool: ask_user, args: {'question': 'Are you in room 2?'}
+
+[TIAGO-AGENT] Are you in room 2?
+[USER] You can't ask if you're not in room 2.
+[RAI] 2026-09-24 16:30:28,564 rai.agents.langchain.core.tool_runner[1154359] INFO Tool ask_user completed in 11.49 seconds. Tool output: You can't ask if you're not in room 2.
+[RAI] 2026-09-24 16:30:28,564 rai.agents.langchain.core.tool_runner[1154359] INFO Running tool: wait_seconds, args: {'seconds': 3}
+[RAI] 2026-09-24 16:30:31,567 rai.agents.langchain.core.tool_runner[1154359] INFO Tool wait_seconds completed in 3.00 seconds. Tool output: Waited for 3.0 seconds.
+[RAI] 2026-09-24 16:30:31,567 rai.agents.langchain.core.tool_runner[1154359] INFO Running tool: navigate_to_named_location, args: {'location': 'room_3'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=-3.12, y=6.51
+[RAI] 2026-09-24 16:30:39,087 rai.agents.langchain.core.tool_runner[1154359] INFO Tool navigate_to_named_location completed in 7.52 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=-3.12, y=6.51, yaw=0.0.
+[RAI] 2026-09-24 16:30:39,087 rai.agents.langchain.core.tool_runner[1154359] INFO Running tool: ask_user, args: {'question': 'Are you in room 3?'}
+
+[TIAGO-AGENT] Are you in room 3?
+[USER] You are not in room 3. You got lost and you lost, I'm sorry.
+[RAI] 2026-09-24 16:31:04,307 rai.agents.langchain.core.tool_runner[1154359] INFO Tool ask_user completed in 25.22 seconds. Tool output: You are not in room 3. You got lost and you lost, I'm sorry.
+[RAI] 2026-09-24 16:31:04,307 rai.agents.langchain.core.tool_runner[1154359] INFO Running tool: wait_seconds, args: {'seconds': 3}
+[RAI] 2026-09-24 16:31:07,310 rai.agents.langchain.core.tool_runner[1154359] INFO Tool wait_seconds completed in 3.00 seconds. Tool output: Waited for 3.0 seconds.
+[RAI] 2026-09-24 16:31:07,310 rai.agents.langchain.core.tool_runner[1154359] INFO Running tool: ask_user, args: {'question': 'Are you in room 4?'}
+
+[TIAGO-AGENT] Are you in room 4?
+[USER] 

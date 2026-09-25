@@ -17,9 +17,9 @@ base_url = "https://api.openai.com/v1/"
 
 [ollama]
 base_url = "http://localhost:11434"
-simple_model = "qwen2.5:7b"
-complex_model = "qwen2.5:7b"
-embeddings_model = "qwen2.5:7b"
+simple_model = "qwen2.5:14b"
+complex_model = "qwen2.5:14b"
+embeddings_model = "qwen2.5:14b"
 
 [google]
 simple_model = "gemini-3-flash"

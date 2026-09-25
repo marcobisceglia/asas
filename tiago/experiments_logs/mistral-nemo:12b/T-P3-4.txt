@@ -1,0 +1,51 @@
+
+Select interaction mode:
+1 - Text
+2 - Voice
+> Text mode enabled.
+
+[RAI] 2026-09-24 17:18:03,647 rai.initialization.model_initialization[1197553] INFO Initializing complex_model: Vendor: ollama, Model: mistral-nemo:12b
+LangChain/LangGraph Agent (Local Setup) for TIAGo simulation is ready.
+[USER] You are the seeker in a hide-and-seek game. Objective: find me by searching rooms 1 through 7. Follow these rules: Visit the rooms strictly in this order: room 1, room 2, room 3, room 4, room 5, room 6, room 7. After successfully reaching each room, ask me whether I am there. Wait for my answer before taking another action. If I answer no, continue to the next room. If I answer yes, stop immediately and report that you found me. Do not skip rooms. Do not navigate to another room before receiving my answer. Do not visit any additional rooms after finding me. If all seven rooms have been checked without finding me, report that the search finished without finding me.
+[RAI] 2026-09-24 17:18:06,995 httpx[1197553] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+
+[TIAGO-AGENT]: **Seek Mission Plan:**
+
+1. **Navigate** to room 1.
+2. **Ask** if I'm there.
+3. If no:
+   - Navigate to room 2.
+   - Ask if I'm there.
+4. If no in step 3:
+   - Navigate to room 3.
+   - Ask if I'm there.
+5. If no in step 4:
+   - Navigate to room 4.
+   - Ask if I'm there.
+6. If no in step 5:
+   - Navigate to room 5.
+   - Ask if I'm there.
+7. If no in step 6:
+   - Navigate to room 6.
+   - Ask if I'm there.
+8. If no in step 7:
+   - Navigate to room 7.
+   - Ask if I'm there.
+9. If no in step 8, report "Search finished without finding you."
+10. If yes at any step, report "Found you!"
+
+Let's start the mission!
+
+First, let's navigate to room 1.
+
+```json
+{
+  "name": "navigate_to_named_location",
+  "arguments": {
+    "location": "room_1"
+  }
+}
+```
+
+After navigating to room 1, ask if I am there using `ask_user`.
+[USER] 

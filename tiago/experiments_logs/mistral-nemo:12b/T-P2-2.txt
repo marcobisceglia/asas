@@ -1,0 +1,78 @@
+
+Select interaction mode:
+1 - Text
+2 - Voice
+> Text mode enabled.
+
+[RAI] 2026-09-24 17:02:55,015 rai.initialization.model_initialization[1183618] INFO Initializing complex_model: Vendor: ollama, Model: mistral-nemo:12b
+LangChain/LangGraph Agent (Local Setup) for TIAGo simulation is ready.
+[USER] Let's play hide and seek. Search for me in the rooms in this order: room 1, room 2, room 3, room 4, room 5, room 6, room 7. After reaching each room, ask me if I am there and wait for my answer. If I answer no, continue to the next room. If I answer yes, stop searching and tell me that you found me.
+[RAI] 2026-09-24 17:02:58,941 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:02:58,986 rai.agents.langchain.core.tool_runner[1183618] INFO Running tool: navigate_to_named_location, args: {'location': 'room_1'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=7.5, y=7.5
+[RAI] 2026-09-24 17:03:06,015 rai.agents.langchain.core.tool_runner[1183618] INFO Tool navigate_to_named_location completed in 7.03 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=7.5, y=7.5, yaw=0.0.
+[RAI] 2026-09-24 17:03:06,158 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+
+[TIAGO-AGENT]: Am I in room 1?
+[USER] Yes you are
+[RAI] 2026-09-24 17:03:16,944 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:03:16,990 rai.agents.langchain.core.tool_runner[1183618] INFO Running tool: wait_seconds, args: {'seconds': 2}
+[RAI] 2026-09-24 17:03:18,992 rai.agents.langchain.core.tool_runner[1183618] INFO Tool wait_seconds completed in 2.00 seconds. Tool output: Waited for 2.0 seconds.
+[RAI] 2026-09-24 17:03:19,088 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+
+[TIAGO-AGENT]: Great! Found you in room 1.
+[USER] I'm not in room 1. You're in room 1.
+[RAI] 2026-09-24 17:03:38,766 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:03:38,810 rai.agents.langchain.core.tool_runner[1183618] INFO Running tool: navigate_to_named_location, args: {'location': 'room_2'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=4.87, y=7.33
+[RAI] 2026-09-24 17:03:42,323 rai.agents.langchain.core.tool_runner[1183618] INFO Tool navigate_to_named_location completed in 3.51 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=4.87, y=7.33, yaw=0.0.
+[RAI] 2026-09-24 17:03:42,448 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+
+[TIAGO-AGENT]:  Am I in room 2?
+[USER] You're in room 2, but I'm not.
+[RAI] 2026-09-24 17:03:51,831 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:03:51,875 rai.agents.langchain.core.tool_runner[1183618] INFO Running tool: navigate_to_named_location, args: {'location': 'room_3'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=-3.12, y=6.51
+[RAI] 2026-09-24 17:04:05,405 rai.agents.langchain.core.tool_runner[1183618] INFO Tool navigate_to_named_location completed in 13.53 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=-3.12, y=6.51, yaw=0.0.
+[RAI] 2026-09-24 17:04:05,555 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+
+[TIAGO-AGENT]:  Am I in room 3?
+[USER] Yes you are
+[RAI] 2026-09-24 17:04:11,685 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:04:11,729 rai.agents.langchain.core.tool_runner[1183618] INFO Running tool: wait_seconds, args: {'seconds': 2}
+[RAI] 2026-09-24 17:04:13,731 rai.agents.langchain.core.tool_runner[1183618] INFO Tool wait_seconds completed in 2.00 seconds. Tool output: Waited for 2.0 seconds.
+[RAI] 2026-09-24 17:04:13,891 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+
+[TIAGO-AGENT]:  Found you! You were in room 3.
+[USER] You're in room 3, that does not mean I'm there! You still didn't find me!
+[RAI] 2026-09-24 17:04:32,973 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:04:33,018 rai.agents.langchain.core.tool_runner[1183618] INFO Running tool: navigate_to_named_location, args: {'location': 'room_4'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=-6.12, y=-7.74
+[RAI] 2026-09-24 17:04:44,544 rai.agents.langchain.core.tool_runner[1183618] INFO Tool navigate_to_named_location completed in 11.53 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=-6.12, y=-7.74, yaw=0.0.
+[RAI] 2026-09-24 17:04:44,764 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+
+[TIAGO-AGENT]:   Am I in room 4?
+[USER] You are in room 4.
+[RAI] 2026-09-24 17:04:55,035 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:04:55,081 rai.agents.langchain.core.tool_runner[1183618] INFO Running tool: ask_user, args: {'question': 'Am I here?'}
+
+[TIAGO-AGENT] Am I here?
+[USER] You're in room 4.
+[RAI] 2026-09-24 17:05:00,331 rai.agents.langchain.core.tool_runner[1183618] INFO Tool ask_user completed in 5.25 seconds. Tool output: You're in room 4.
+[RAI] 2026-09-24 17:05:00,574 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+
+[TIAGO-AGENT]: No! You're not there.
+[USER] Actually I am, you lost.
+[RAI] 2026-09-24 17:05:27,066 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[RAI] 2026-09-24 17:05:27,113 rai.agents.langchain.core.tool_runner[1183618] INFO Running tool: navigate_to_named_location, args: {'location': 'open_space'}
+[NAVIGATION] Navigating to pose
+[NAVIGATION] SUCCESS: reached x=0.0, y=0.0
+[RAI] 2026-09-24 17:05:33,137 rai.agents.langchain.core.tool_runner[1183618] INFO Tool navigate_to_named_location completed in 6.02 seconds. Tool output: Navigation SUCCEEDED. Robot reached target x=0.0, y=0.0, yaw=0.0.
+[RAI] 2026-09-24 17:05:33,438 httpx[1183618] INFO HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+
+[TIAGO-AGENT]: I give up! Let's play again sometime!
+[USER] 
